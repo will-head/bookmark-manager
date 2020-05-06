@@ -22,6 +22,7 @@ CREATE DATABASE "bookmark_manager";
 \dt
 ```
 
-Navigate to `db/migrations` and run the SQL scripts in order.
+Navigate to `db/migrations` and run the SQL script
+TODO: UPDATE bookmark_manager setup script to include all scripts
 
 
