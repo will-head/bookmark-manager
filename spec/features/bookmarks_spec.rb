@@ -19,7 +19,7 @@ feature 'Viewing bookmarks' do
 feature 'Add bookmark' do
   scenario 'A user can add a bookmark' do
     visit('/')
-    expect(page).to have_link('Add bookmark', :href => '/add_bookmark')
+    expect(page).to have_link('Add bookmark', href: '/add_bookmark')
     visit('/add_bookmark')
     fill_in :url, with: "http://howtomobile.photo"
     click_button 'Add Bookmark'
