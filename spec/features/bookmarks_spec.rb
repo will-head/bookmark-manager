@@ -15,4 +15,19 @@ feature 'Viewing bookmarks' do
     expect(page).to have_content "http://www.destroyallsoftware.com"
     expect(page).to have_content "http://www.google.com"
   end
+
+feature 'Add bookmark' do
+  scenario 'A user can add a bookmark' do
+    visit('/')
+    expect(page).to have_link('Add bookmark', :href => '/add_bookmark')
+    visit('/add_bookmark')
+    fill_in :url, with: "http://howtomobile.photo"
+    click_button 'Add Bookmark'
+    expect(page).to have_content "http://www.makersacademy.com"
+    expect(page).to have_content "http://www.destroyallsoftware.com"
+    expect(page).to have_content "http://www.google.com"
+    expect(page).to have_content "http://howtomobile.photo"
+  end
+end
+
 end
